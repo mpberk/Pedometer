@@ -16,6 +16,16 @@
     <script src="/js/turncompass.js"></script>
     -->
 
+    document.addEventListener("deviceready", loaded, false);
+    function loaded() {
+        document.getElementById("ForceGPScoorduse").disabled = false;
+        document.getElementById("AccelEnable").disabled = false;
+        document.getElementById("GyroEnable").disabled = false;
+        document.getElementById("CompassEnable").disabled = false;
+        document.getElementById("GPSEnable").disabled = false;
+    }
+
+	
 </head>
 
 <body style="overflow-y: scroll;">
@@ -89,7 +99,7 @@
 		Sensors
 		<div id="Accel">
 			<div class="toggle">
-				<button id="AccelEnable">Accel</button>
+				<button id="AccelEnable" disabled>Accel</button>
 				<span id="accelStatus">off</span>
 			</div>
 			<div class="item" id="accelOutput">
@@ -100,7 +110,7 @@
 		</div>
 		<div id="Gyro">
 			<div class="toggle">
-				<button id="GyroEnable">Gyro</button>
+				<button id="GyroEnable" disabled>Gyro</button>
 				<span id="gyroStatus">off</span>
 			</div>
 			<div class="item" id="gyroOutput">
@@ -111,7 +121,7 @@
 		</div>
 		<div id="Compass">
 			<div class="toggle">
-				<button id="CompassEnable">Compass</button>
+				<button id="CompassEnable" disabled>Compass</button>
 				<span id="compassStatus">off</span>
 			</div>
 			<div class="item" id="compassOutput">
@@ -121,7 +131,7 @@
 		</div>
 		<div id="GPS">
 			<div class="toggle">
-				<button id="GPSEnable">GPS</button>
+				<button id="GPSEnable" disabled>GPS</button>
 				<span id="gpsStatus">off</span>
 			</div>
 			<div class="item" id="locationOutput">
@@ -146,7 +156,7 @@
 	<div id="CalcGPS">
 		Calulated GPS
 		<div class="toggle">
-			<button id="ForceGPScoorduse">USE GPS</button>
+			<button id="ForceGPScoorduse" disabled>USE GPS</button>
 			<span id="forcegpsvalue"></span>
 		</div>
 		<div class="item" id="calculatedOutput">
