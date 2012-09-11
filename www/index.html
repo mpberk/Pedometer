@@ -8,22 +8,23 @@
 
     <script src="phonegap.js"></script>
 
-    <!--
+    
     <script src="/js/mainprogram.js"></script>
     <script src="/js/forwardlinear.js"></script>
     <script src="/js/forwardsteps.js"></script>
     <script src="/js/turngyro.js"></script>
     <script src="/js/turncompass.js"></script>
-    -->
-
-    document.addEventListener("deviceready", loaded, false);
-    function loaded() {
-        document.getElementById("ForceGPScoorduse").disabled = false;
-        document.getElementById("AccelEnable").disabled = false;
-        document.getElementById("GyroEnable").disabled = false;
-        document.getElementById("CompassEnable").disabled = false;
-        document.getElementById("GPSEnable").disabled = false;
-    }
+    
+    <script type="text/javascript">
+        document.addEventListener("deviceready", loaded, false);
+        function loaded() {
+            document.getElementById("ForceGPScoorduse").disabled = false;
+            document.getElementById("AccelEnable").disabled = false;
+            document.getElementById("GyroEnable").disabled = false;
+            document.getElementById("CompassEnable").disabled = false;
+            document.getElementById("GPSEnable").disabled = false;
+        }
+	</script>
 
 	
 </head>
