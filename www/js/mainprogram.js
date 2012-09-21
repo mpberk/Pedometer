@@ -1,4 +1,4 @@
-﻿       var SensorStateClass = WinJS.Class.define(
+       var SensorStateClass = WinJS.Class.define(
     null,
     {
         accel: {
@@ -209,7 +209,7 @@ function getSliderValue(sliderID) {
 */
 
 
- 
+
     function forwardmotiondetect() {
         if (MotionType == 1) linearmotiondetect();
         if (MotionType == 0) stepmotiondetect();
@@ -490,7 +490,7 @@ function getSliderValue(sliderID) {
                 enableInterval();
                 document.getElementById("accelStatus").textContent = deviceon;
                 document.getElementById("AccelEnable").style.background = 'Green';
-                
+
             }
         }
     }
@@ -537,7 +537,7 @@ function getSliderValue(sliderID) {
                 disableInterval();
                 document.getElementById("gpsStatus").textContent = deviceoff;
                 document.getElementById("GPSEnable").style.background = 'Gray';
-             
+
                 //disableGPS();
             }
             else {
@@ -696,8 +696,9 @@ function getSliderValue(sliderID) {
         // id("scenario3Open").disabled = false;
         // id("scenario3Revoke").disabled = true;
         // id("scenarios").addEventListener("change", /*@static_cast(EventListener)*/resetAll, false);
-        
-        var accelerometer = Windows.Devices.Sensors.Accelerometer.getDefault();
+
+        // var accelerometer = Windows.Devices.Sensors.Accelerometer.getDefault();
+        var accelerometer = navigator.accelerometer;
         SensorState.accel.accelerometer = accelerometer;
         if (SensorState.accel.accelerometer) {
             // Choose a report interval supported by the sensor
